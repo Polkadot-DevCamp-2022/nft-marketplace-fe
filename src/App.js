@@ -19,9 +19,11 @@ import Events from './Events'
 import Interactor from './Interactor'
 import Metadata from './Metadata'
 import NodeInfo from './NodeInfo'
-import TemplateModule from './TemplateModule'
+import Mint from './nft-marketplace/Mint.js'
 import Transfer from './Transfer'
 import Upgrade from './Upgrade'
+import UserNFTs from './nft-marketplace/UserNFTs.js'
+import NftsOnSale from './nft-marketplace/NFTsOnSale.js'
 
 function Main() {
   const { apiState, apiError, keyringState } = useSubstrateState()
@@ -82,7 +84,11 @@ function Main() {
             <Events />
           </Grid.Row>
           <Grid.Row>
-            <TemplateModule />
+            <Mint />
+            <UserNFTs />
+          </Grid.Row>
+          <Grid.Row>
+            <NftsOnSale />
           </Grid.Row>
         </Grid>
       </Container>
